@@ -4,8 +4,9 @@ name: Release Drafter
 on:
   push:
     # branches to consider in the event; optional, defaults to all
-    branches:
-      - main
+    branches: [ main ]
+
+permissions: write-all    
 
 jobs:
   update_release_draft:
@@ -13,4 +14,4 @@ jobs:
     steps:
       - uses: release-drafter/release-drafter@v5
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_SECRET }}
