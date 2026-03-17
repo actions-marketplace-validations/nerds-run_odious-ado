@@ -41,7 +41,7 @@ jobs:
               # File containing the Python version to use. Example:
               python-version-file: .python-version # optional
           - name: Setup just
-            uses: extractions/setup-just@v1
+            uses: extractions/setup-just@v3
           - name: Installing Dependencies
             run: just dev install
           - name: Build Static Content
